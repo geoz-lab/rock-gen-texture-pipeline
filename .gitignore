@@ -1,0 +1,28 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+.Python
+*.so
+.venv/
+venv/
+env/
+.env
+
+# Editors / OS
+.DS_Store
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Training outputs (regenerate locally)
+OUTPUT/
+RESULT/
+*.pth
+*.pt
+*.ckpt
+wandb/
+
+# Jupyter
+.ipynb_checkpoints/

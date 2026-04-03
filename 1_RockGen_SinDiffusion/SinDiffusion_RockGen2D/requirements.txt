@@ -1,0 +1,19 @@
+# SinDiffusion Project Dependencies
+# Core PyTorch packages
+torch>=2.0.0
+torchvision>=0.15.0
+
+# Image processing
+Pillow>=8.0.0
+numpy>=1.21.0
+opencv-python>=4.7.0
+
+# Parallel processing
+mpi4py>=3.1.0
+
+# File handling
+blobfile>=2.0.1
+
+# Note: This project was tested with Python 3.8-3.13
+# For GPU support, install CUDA-enabled PyTorch versions
+# For CPU-only usage, the current setup is sufficient
