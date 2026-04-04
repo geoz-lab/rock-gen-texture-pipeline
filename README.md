@@ -124,8 +124,8 @@ Use `python main.py -h` for details. See `3_TextureSyn/LICENSE.md` for the MIT t
 
 **Scripts** (`4_ToFabPattern`):
 
-- **`todxf.py`** — Loads a grayscale rock image, resizes to **5001×2001**, **Otsu** threshold, finds **outer contours and holes** (OpenCV), shifts geometry to the origin, scales by **4×**, writes a **polyline DXF** (`rock_background.dxf` by default).
-- **`hatch.py`** — Reads the DXF, identifies the **outer boundary** containing a user-defined **seed point**, attaches **solid hatch** on layer `hatch`, saves `rock_background_hatched.dxf`.
+- **`todxf.py`** — Loads a grayscale rock image, resizes to **5001×2001** (as you wish), **Otsu** threshold, finds **outer contours and holes** (OpenCV), shifts geometry to the origin, scales by **4×**, writes a **polyline DXF** (`rock_background.dxf` by default).
+- **`hatch.py`** — Reads the DXF, identifies the **outer boundary** containing a user-defined **seed point**, attaches **solid hatch** on layer `hatch`, saves `rock_background_hatched.dxf` for the future ECAD identifier.
 
 **Dependencies:** `opencv-python`, `numpy`, `ezdxf`.
 
@@ -140,10 +140,10 @@ This repository **mixes licenses**; you must comply with the license in each sub
 | Component | License | File |
 |-----------|---------|------|
 | `1_RockGen_SinDiffusion/SinDiffusion_RockGen2D` | Apache-2.0 | [`1_RockGen_SinDiffusion/SinDiffusion_RockGen2D/LICENSE`](1_RockGen_SinDiffusion/SinDiffusion_RockGen2D/LICENSE) |
-| `3_TextureSyn` | MIT | [`3_TextureSyn/LICENSE.md`](3_TextureSyn/LICENSE.md) |
 | `2_Percolation`, `4_ToFabPattern`, root `README.md` | See root [`LICENSE`](LICENSE) | — |
+| `3_TextureSyn` | MIT | [`3_TextureSyn/LICENSE.md`](3_TextureSyn/LICENSE.md) |
 
-SinDiffusion builds on [OpenAI guided-diffusion](https://github.com/openai/guided-diffusion); see the upstream `LICENSE` and paper acknowledgments in the SinDiffusion README.
+
 
 ## Disclaimer
 
