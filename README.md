@@ -1,6 +1,6 @@
 # Rock image generation and texture pipeline
 
-This repository is a four-stage workflow for **2D rock microstructure images**: train a single-image diffusion model for diverse rock-like samples, analyze and encourage pore **percolation**, **synthesize larger textures** via image quilting, and export **DXF** geometry for microfluidic-style layout in ECAD and fabrication.
+This repository is a four-stage workflow for **generation of 2D rock images and further preparation for microfluidic fabrications**: train a single-image diffusion model for diverse rock samples, gurantee the **percolation** of pores, **synthesize different shaped/sized textures** via image quilting, and export **DXF** geometry for microfluidic layout in ECAD and fabrication.
 
 Each stage lives in its own folder. Several stages bundle or adapt **third-party code**; see [License](#license) and the links below.
 
