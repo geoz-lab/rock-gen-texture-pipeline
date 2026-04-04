@@ -17,7 +17,7 @@ Each stage lives in its own folder. Several stages bundle or adapt **third-party
 
 ## 1. Rock generation with SinDiffusion
 
-**Method.** [SinDiffusion: Learning a Diffusion Model from a Single Natural Image](https://arxiv.org/abs/2211.12445) learns a diffusion model from **one** training image by modeling internal patch statistics.
+**Method.** [SinDiffusion: Train a Diffusion Model from a Single Natural Image](https://arxiv.org/abs/2211.12445) learns a diffusion model from **one** training image by modeling internal patch statistics.
 
 **Upstream.** Official implementation: [WeilunWang/SinDiffusion](https://github.com/WeilunWang/SinDiffusion) (Apache-2.0). This project uses the same `guided_diffusion` stack with a **single-image training and sampling** workflow tailored for rock tomography–style inputs.
 
