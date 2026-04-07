@@ -17,11 +17,14 @@ env/
 *.swo
 
 # Training outputs (regenerate locally)
-OUTPUT/
 RESULT/
+# Checkpoints / weights: ignored by default, but allowed under any OUTPUT/ folder
 *.pth
 *.pt
 *.ckpt
+!**/OUTPUT/**/*.pth
+!**/OUTPUT/**/*.pt
+!**/OUTPUT/**/*.ckpt
 wandb/
 
 # Jupyter
