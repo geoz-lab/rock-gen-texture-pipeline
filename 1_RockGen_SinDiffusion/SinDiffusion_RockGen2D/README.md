@@ -3,7 +3,8 @@
 Official PyTorch implementation of "SinDiffusion: Learning a Diffusion Model from a Single Natural Image".
 The code aims to allow the users to reproduce and extend the results reported in the study. Please cite the paper when reporting, reproducing or extending the results.
 
-[[Arxiv](https://arxiv.org/abs/2211.12445)] [[Project (Comming Soon)]()]
+[[Arxiv](https://arxiv.org/abs/2211.12445)]
+
 
 # Overview
 
@@ -15,28 +16,44 @@ This avoids the accumulation of errors, which cause characteristic artifacts in 
 Second, we identify that a patch-level receptive field of the diffusion network is crucial and effective for capturing the image's patch statistics, therefore we redesign the network structure of the diffusion model.
 Extensive experiments on a wide range of images demonstrate the superiority of our proposed method for modeling the patch distribution.
 
-<p align="center">
-<img src="assets/teaser.png" >
-</p>
-
-## Generation Results
-* **Generated images of arbitary resolution:**
-<p align='center'>  
-  <img src='assets/diverse.png'/>
-</p>
-
-* **High-resolution single image generation:**
-<p align='center'>  
-  <img src='assets/highres.png'/>
-</p>
-
 ## Prerequisites
 - Linux
 - Python 3
 - CPU or NVIDIA GPU + CUDA CuDNN
 
 ## Datasets
-You can use either Places50 dataset in [SinGAN](https://github.com/tamarott/SinGAN) or arbitray images collected online.
+Here we included the data in the ./data folder which includes rock images of different morphologies.
+
+
+| Rock Type | Data Sources / References |
+| :--- | :--- |
+| **Sandstone** | Bentheimer (Kelly et al., 2021) |
+| | North Sea (Niu et al., 2020) |
+| | Leman (Scott et al., 2020) |
+| | North Sea (Scott et al., 2020) |
+| | Berea (Safari et al., 2021) |
+| **Carbonate** | Liu et al. (2022) |
+| **Limestone** | Indiana (Safari et al., 2021) |
+| **Mudrock** | Nankai (Milliken et al., 2010) |
+| **Shale** | Landry et al. (2020) |
+
+**Full References**
+
+- Liu & Mukerji (2022): M. Liu and T. Mukerji, Geophysical Research Letters, 2022, 49, e2022GL098342.
+
+- Guan et al. (2021): M. Guan, T. I. Anderson, P. Creux and A. R. Kovscek, Computers & Geosciences, 2021, 156, 104905.
+
+- Safari et al. (2021): H. Safari, B. J. Balcom and A. Afrough, Computers & Geosciences, 2021, 156, 104895.
+
+- Niu et al. (2020): Y. Niu, P. Mostaghimi, M. Shabaninejad, P. Swietojanski and R. T. Armstrong, Water Resources Research, 2020, 56, e2019WR026597.
+
+- Scott et al. (2019/2020): G. Scott, K. Wu and Y. Zhou, Transport in Porous Media, 2019, 129, 855–884.
+
+- Milliken & Reed (2010): K. L. Milliken and R. M. Reed, Journal of Structural Geology, 2010, 32, 1887–1898.
+
+- Landry et al. (2020): C. J. Landry, B. S. Hart and M. Prodanovic, SPE/AAPG/SEG Unconventional Resources Technology Conference, 2020, p. D023S040R002.
+
+
 
 ## Training the model (single image, single GPU/CPU)
 To train the model on a single reference image (e.g., `data/test2.png`) and save checkpoints/samples:
@@ -55,24 +72,10 @@ python test_proper_model.py --model_path OUTPUT/proper_sindiffusion_test2/model_
 ```
 The generated images are saved to `./RESULT/proper_sindiffusion_test2/`, alongside a `comparison.png` visualization.
 
-## Pretrained models (Comming Soon)
-The pre-trained models will be released soon.
-
-## Image Manipulation
-* **Text-guided image generation:**
-<p align='center'>  
-  <img src='assets/text-guided.png'/>
-</p>
-
-* **Image Outpainting:**
-<p align='center'>  
-  <img src='assets/outpainting.png'/>
-</p>
-
 # Additional information
 
-## Citation
-If you use this work please cite
+## Acknowledge
+Our code is developed based on [SinDiffusion]. If you use the original model please cite
 ```
 @article{wang2022sindiffusion,
   title={SinDiffusion: Learning a Diffusion Model from a Single Natural Image},
@@ -81,10 +84,3 @@ If you use this work please cite
   year={2022}
 }
 ```
-
-## Acknowledge
-Our code is developed based on [guided-diffusion](https://github.com/openai/guided-diffusion). We also thank [SinGAN](https://github.com/tamarott/SinGAN) for SIFID computation, [stargan-v2](https://github.com/clovaai/stargan-v2) for LPIPS computation.
-
-## Contact
-Please feel free to open an issue or contact us personally if you have questions, need help, or need explanations.
-Write to one of the following email addresses: **wwlustc** at **mail** dot **ustc** dot **cn**.
